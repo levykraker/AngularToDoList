@@ -1,0 +1,36 @@
+
+.przycisk{
+  background-color:rgb(144, 203, 243);
+  color: #fff;
+}
+.tasks{
+  margin-top: 10px;
+  margin-bottom: 10%;
+}
+.pull-right{
+  justify-content: space-between;
+}
+.spanChecker{
+  padding-right: 2%;
+}
+.remove{
+  background-color:rgb(247, 77, 77);
+  color: #fff;
+  cursor: pointer;
+
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+.dot_undone{
+
+  background-color: #fff;
+  border: 1px solid black;
+
+}

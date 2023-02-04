@@ -1,0 +1,21 @@
+<div class="input-group">
+  <input type="text" class="form-control" #itemTitle>
+  <div class="input-group-addon" (click)="onAdd(itemTitle)">
+    <button class="btn przycisk"> Dodaj zadanie</button>
+  </div>
+</div>
+
+<div >
+
+  <ul class="list-group tasks">
+    <li class="list-group-item" *ngFor="let item of toDoListArry">
+      <span  class="spanChecker" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key,item.isChecked)">
+        <i class="dot" [ngClass]="item.isChecked?'fa fa-check':'dot_undone'"></i> 
+      </span>
+      {{item.title}}
+      <span class="pull-right" (click)="onDelete(item.$key)">
+        <button type="button" class=" btn remove">Usuń </button>
+      </span>
+    </li>
+  </ul>
+</div>

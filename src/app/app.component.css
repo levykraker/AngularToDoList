@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.head{
+  background-color: rgba(164, 214, 255, 0.801);
+  font-family: 'Lobster', cursive;
+  text-decoration: underline;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}

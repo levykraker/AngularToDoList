@@ -31,14 +31,14 @@ jobs:
     - name: Build application
       run: npm run build
 
-#    - name: Push Build to Releases
-#      uses: ncipollo/release-action@v1
-#      with:
-#        artifacts: "dist/angular-githubaction/*"
-#        token: ${{ secrets.TOKEN }}
-
-    - uses: ncipollo/release-action@v1
+    - name: Push Build to Releases
+      uses: ncipollo/release-action@v1
       with:
-        artifacts: "release.tar.gz,foo/*.txt"
-        bodyFile: "body.md"
-        token: ${{ secrets.GIT_TOKEN }}
+        artifacts: "dist/angular-githubaction/*"
+        token: ${{ secrets.TOKEN }}
+
+#    - uses: ncipollo/release-action@v1
+#      with:
+#        artifacts: "release.tar.gz,foo/*.txt"
+#        bodyFile: "body.md"
+#        token: ${{ secrets.GIT_TOKEN }}

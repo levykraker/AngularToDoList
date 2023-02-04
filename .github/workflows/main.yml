@@ -3,8 +3,7 @@ name: Angular CI/CD
 on:
   workflow_dispatch:
   push:
-    tags:
-      - v1.2
+    branches: [ main ]
 
 jobs:
   build:

@@ -31,11 +31,15 @@ jobs:
     - name: Build application
       run: npm run build
 
-    - name: Push Build to Releases
-      uses: ncipollo/release-action@v1
+    - name: 'Deploy to Azure Web App'
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
       with:
-        artifacts: "dist/angular-githubaction/*"
-        token: ${{ secrets.TOKEN }}
+          app-name: 'AngularToDoList'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_1234 }}
+          package: .
+
 
 #    - uses: ncipollo/release-action@v1
 #      with:
